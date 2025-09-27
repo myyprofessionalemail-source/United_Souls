@@ -1,6 +1,6 @@
 # StyleHub - Modern E-commerce Store
 
-A modern, minimalist e-commerce website built with React.js, inspired by Apple's design language. Features a clean interface for selling clothing and footwear with a fully functional cart system.
+A modern, minimalist e-commerce website built with React.js. Features a clean interface for selling clothing and footwear with a fully functional cart system.
 
 ## Features
 
@@ -9,7 +9,6 @@ A modern, minimalist e-commerce website built with React.js, inspired by Apple's
 - 🛍️ **Product Detail Pages** with comprehensive information
 - 🛒 **Shopping Cart** with add/remove functionality
 - 📱 **Responsive Design** for mobile and desktop
-- 🎨 **Apple-inspired Design** with modern, minimalist styling
 - ⚡ **Fast Performance** with optimized React components
 
 ## Project Structure
