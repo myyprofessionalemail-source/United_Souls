@@ -1,0 +1,56 @@
+/* Clothing Page Styles */
+.clothing-page {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.page-header {
+  background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%);
+  padding: 4rem 0 2rem;
+  text-align: center;
+  border-bottom: 1px solid #d2d2d7;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  font-size: 1.25rem;
+  color: #86868b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding: 2rem 0 1rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+}
