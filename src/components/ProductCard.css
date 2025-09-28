@@ -12,25 +12,17 @@
   z-index: 2;
   letter-spacing: 1px;
 }
-.discount-badge {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background: #d54040;
-  color: #fff;
-  font-size: 0.95rem;
-  font-weight: 700;
-  padding: 4px 12px;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  z-index: 2;
-  letter-spacing: 1px;
+.discount-badge.small {
+  font-size: 0.65rem;
+  padding: 1px 6px;
+  border-radius: 10px;
 }
 .cart-item-pricing, .item-pricing {
   display: flex;
   align-items: center;
   gap: 8px;
 }
+
 .cart-item-mrp, .item-mrp {
   font-size: 1rem;
   color: #888;

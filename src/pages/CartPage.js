@@ -51,7 +51,7 @@ const CartPage = () => {
                   <div style={{ position: 'relative' }}>
                     <img src={item.image} alt={item.name} />
                     {item.mrp && item.mrp > item.price && (
-                      <span className="discount-badge">
+                      <span className="discount-badge small">
                         {Math.round(((item.mrp - item.price) / item.mrp) * 100)}% OFF
                       </span>
                     )}
