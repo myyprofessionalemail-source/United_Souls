@@ -34,7 +34,7 @@ const CheckoutForm = ({ onOrderComplete }) => {
   };
 
   const calculateShipping = () => {
-  return calculateTotal() > 999 ? 0 : 9.99; // Free shipping over 999
+  return calculateTotal() > 999 ? 0 : 100.0; // Free shipping over 999
   };
 
   const calculateFinalTotal = () => {

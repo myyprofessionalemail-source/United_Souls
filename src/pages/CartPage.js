@@ -105,7 +105,7 @@ const CartPage = () => {
               
               <div className="summary-row total">
                 <span>Total:</span>
-                <span>₹{(getTotalPrice() + (getTotalPrice() > 999 ? 0 : 9.99)).toFixed(2)}</span>
+                <span>₹{(getTotalPrice() + (getTotalPrice() > 999 ? 0 : 100.0)).toFixed(2)}</span>
               </div>
 
               <div className="checkout-actions">

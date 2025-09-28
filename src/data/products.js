@@ -3,7 +3,7 @@ export const products = [
   // Clothing Products
   {
     id: 1,
-    name: "Classic White T-Shirt",
+    name: "Drop Shoulder T-Shirt",
     category: "clothing",
     price: 549.0,
     images: [
