@@ -259,13 +259,29 @@ const CheckoutForm = ({ onOrderComplete }) => {
             {items.map((item) => (
               <div key={`${item.id}-${item.size}`} className="order-item">
                 <div className="item-image">
-                  <img src={item.image} alt={item.name} />
+                  <div style={{ position: 'relative' }}>
+                    <img src={item.image} alt={item.name} />
+                    {item.mrp && item.mrp > item.price && (
+                      <span className="discount-badge">
+                        {Math.round(((item.mrp - item.price) / item.mrp) * 100)}% OFF
+                      </span>
+                    )}
+                  </div>
                 </div>
                 <div className="item-details">
                   <h4>{item.name}</h4>
                   <p>Size: {item.size}</p>
                   <p>Quantity: {item.quantity}</p>
-                  <p className="item-price">₹{(item.price * item.quantity).toFixed(2)}</p>
+                  <div className="item-pricing">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                      <span className="item-mrp-label" style={{ fontSize: '0.85rem', color: '#888' }}>MRP:</span>
+                      {item.mrp && item.mrp > item.price ? (
+                        <span className="item-mrp" style={{ textDecoration: 'line-through', fontSize: '1rem', color: '#888', marginRight: '12px' }}>₹{item.mrp}</span>
+                      ) : null}
+                      <span className="item-price-label" style={{ fontSize: '0.85rem', color: '#d54040' }}>Discount Price:</span>
+                      <span className="item-price" style={{ fontSize: '1.1rem', color: '#d54040', fontWeight: 'bold' }}>₹{(item.price * item.quantity).toFixed(2)}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

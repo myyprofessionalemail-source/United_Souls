@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from './CartContext';
 import { getProductImage } from '../data/products';
+import { getDiscountPercent } from '../data/products';
 import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
@@ -35,10 +36,24 @@ const ProductCard = ({ product }) => {
             className="product-image"
             loading="lazy"
           />
+          {getDiscountPercent(product) > 0 && (
+            <span className="discount-badge">
+              {getDiscountPercent(product)}% OFF
+            </span>
+          )}
         </div>
         <div className="product-info">
           <h3 className="product-name">{product.name}</h3>
-          <p className="product-price">₹{product.price}</p>
+          <div className="product-pricing">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+              <span className="product-mrp-label" style={{ fontSize: '0.85rem', color: '#888' }}>MRP:</span>
+              {product.mrp && product.mrp > product.price ? (
+                <span className="product-mrp" style={{ textDecoration: 'line-through', fontSize: '1rem', color: '#888', marginRight: '12px' }}>₹{product.mrp}</span>
+              ) : null}
+              <span className="product-price-label" style={{ fontSize: '0.85rem', color: '#d54040' }}>Discount Price:</span>
+              <span className="product-price" style={{ fontSize: '1.1rem', color: '#d54040', fontWeight: 'bold' }}>₹{product.price}</span>
+            </div>
+          </div>
           <div className="product-sizes">
             <span className="sizes-label">Available Sizes:</span>
             {product.sizes && product.sizes.length > 0 ? (

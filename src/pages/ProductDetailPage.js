@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getProductById } from '../data/products';
+import { getDiscountPercent } from '../data/products';
 import { useCart } from '../components/CartContext';
 import ImageCarousel from '../components/ImageCarousel';
 import './ProductDetailPage.css';
@@ -48,16 +49,32 @@ const ProductDetailPage = () => {
       <div className="product-detail-container">
         <div className="product-detail-content">
           <div className="product-images">
-            <ImageCarousel 
-              images={product.images || [product.image]} 
-              productName={product.name}
-            />
+            <div style={{ position: 'relative' }}>
+              <ImageCarousel 
+                images={product.images || [product.image]} 
+                productName={product.name}
+              />
+              {getDiscountPercent(product) > 0 && (
+                <span className="discount-badge">
+                  {getDiscountPercent(product)}% OFF
+                </span>
+              )}
+            </div>
           </div>
 
           <div className="product-details">
             <div className="product-header">
               <h1 className="product-title">{product.name}</h1>
-              <p className="product-price">₹{product.price}</p>
+              <div className="product-pricing">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                  <span className="product-mrp-label" style={{ fontSize: '0.85rem', color: '#888' }}>MRP:</span>
+                  {product.mrp && product.mrp > product.price ? (
+                    <span className="product-mrp" style={{ textDecoration: 'line-through', fontSize: '1rem', color: '#888', marginRight: '12px' }}>₹{product.mrp}</span>
+                  ) : null}
+                  <span className="product-price-label" style={{ fontSize: '0.85rem', color: '#d54040' }}>Discount Price:</span>
+                  <span className="product-price" style={{ fontSize: '1.1rem', color: '#d54040', fontWeight: 'bold' }}>₹{product.price}</span>
+                </div>
+              </div>
             </div>
 
             <div className="product-description">

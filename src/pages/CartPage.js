@@ -48,13 +48,27 @@ const CartPage = () => {
             {items.map((item, index) => (
               <div key={`${item.id}-${item.size}-${index}`} className="cart-item">
                 <div className="cart-item-image">
-                  <img src={item.image} alt={item.name} />
+                  <div style={{ position: 'relative' }}>
+                    <img src={item.image} alt={item.name} />
+                    {item.mrp && item.mrp > item.price && (
+                      <span className="discount-badge">
+                        {Math.round(((item.mrp - item.price) / item.mrp) * 100)}% OFF
+                      </span>
+                    )}
+                  </div>
                 </div>
                 
                 <div className="cart-item-details">
                   <h3 className="cart-item-name">{item.name}</h3>
                   <p className="cart-item-size">Size: {item.size}</p>
-                  <p className="cart-item-price">₹{item.price}</p>
+                  <div className="cart-item-pricing" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '2px' }}>
+                    <span className="cart-item-mrp-label" style={{ fontSize: '0.85rem', color: '#888' }}>MRP:</span>
+                    {item.mrp && item.mrp > item.price ? (
+                      <span className="cart-item-mrp" style={{ textDecoration: 'line-through', fontSize: '1rem', color: '#888', marginRight: '12px' }}>₹{item.mrp}</span>
+                    ) : null}
+                    <span className="cart-item-price-label" style={{ fontSize: '0.85rem', color: '#d54040' }}>Discount Price:</span>
+                    <span className="cart-item-price" style={{ fontSize: '1.1rem', color: '#d54040', fontWeight: 'bold' }}>₹{item.price}</span>
+                  </div>
                 </div>
 
                 <div className="cart-item-quantity">
