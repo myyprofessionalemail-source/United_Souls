@@ -54,7 +54,7 @@ const CartPage = () => {
                 <div className="cart-item-details">
                   <h3 className="cart-item-name">{item.name}</h3>
                   <p className="cart-item-size">Size: {item.size}</p>
-                  <p className="cart-item-price">${item.price}</p>
+                  <p className="cart-item-price">₹{item.price}</p>
                 </div>
 
                 <div className="cart-item-quantity">
@@ -74,7 +74,7 @@ const CartPage = () => {
                 </div>
 
                 <div className="cart-item-total">
-                  <p className="item-total">${(item.price * item.quantity).toFixed(2)}</p>
+                  <p className="item-total">₹{(item.price * item.quantity).toFixed(2)}</p>
                 </div>
 
                 <div className="cart-item-actions">

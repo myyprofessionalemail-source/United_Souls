@@ -248,7 +248,7 @@ const CheckoutForm = ({ onOrderComplete }) => {
               disabled={!stripe || isProcessing}
               className="place-order-btn"
             >
-              {isProcessing ? 'Processing...' : `Place Order - $${calculateFinalTotal().toFixed(2)}`}
+              {isProcessing ? 'Processing...' : `Place Order - ₹{calculateFinalTotal().toFixed(2)}`}
             </button>
           </form>
         </div>
@@ -265,7 +265,7 @@ const CheckoutForm = ({ onOrderComplete }) => {
                   <h4>{item.name}</h4>
                   <p>Size: {item.size}</p>
                   <p>Quantity: {item.quantity}</p>
-                  <p className="item-price">${(item.price * item.quantity).toFixed(2)}</p>
+                  <p className="item-price">₹{(item.price * item.quantity).toFixed(2)}</p>
                 </div>
               </div>
             ))}
@@ -309,7 +309,7 @@ const CheckoutPage = () => {
           <p>Thank you for your purchase. Your order has been confirmed.</p>
           <div className="order-details">
             <p><strong>Order ID:</strong> #{completedOrder.id}</p>
-            <p><strong>Total:</strong> ${completedOrder.total.toFixed(2)}</p>
+            <p><strong>Total:</strong> ₹{completedOrder.total.toFixed(2)}</p>
             <p><strong>Email:</strong> {completedOrder.customerInfo.email}</p>
           </div>
           <div className="success-actions">

@@ -38,7 +38,7 @@ const ProductCard = ({ product }) => {
         </div>
         <div className="product-info">
           <h3 className="product-name">{product.name}</h3>
-          <p className="product-price">${product.price}</p>
+          <p className="product-price">₹{product.price}</p>
           <div className="product-sizes">
             <span className="sizes-label">Available Sizes:</span>
             {product.sizes && product.sizes.length > 0 ? (
