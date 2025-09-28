@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageCarousel from '../components/ImageCarousel';
 import { Link } from 'react-router-dom';
 import ProductList from '../components/ProductList';
 import { getFeaturedProducts } from '../data/products';
@@ -26,10 +27,11 @@ const HomePage = () => {
           </div>
         </div>
         <div className="hero-image">
-          <img 
-            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=800&fit=crop" 
-            alt="Modern Fashion"
-            className="hero-img"
+          <ImageCarousel 
+            images={[ 
+              '/images/hero_banner_img.png',
+            ]}
+            productName="Hero Banner"
           />
         </div>
       </section>
