@@ -30,6 +30,10 @@ const HomePage = () => {
           <ImageCarousel 
             images={[ 
               '/images/hero_banner_img.png',
+              '/images/hero_banner_img1.jpeg',
+              '/images/hero_banner_img2.jpeg',
+              '/images/hero_banner_img3.jpeg',
+              '/images/hero_banner_img4.jpeg',
             ]}
             productName="Hero Banner"
           />
