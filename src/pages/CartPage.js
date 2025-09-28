@@ -100,7 +100,7 @@ const CartPage = () => {
               
               <div className="summary-row">
                 <span>Shipping:</span>
-                <span>{getTotalPrice() > 999 ? 'Free' : '₹9.99'}</span>
+                <span>{getTotalPrice() > 999 ? 'Free' : '₹100.0'}</span>
               </div>
               
               <div className="summary-row total">

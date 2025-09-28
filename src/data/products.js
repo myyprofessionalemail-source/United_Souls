@@ -5,11 +5,11 @@ export const products = [
     id: 1,
     name: "Classic White T-Shirt",
     category: "clothing",
-    price: 29.99,
+    price: 549.0,
     images: [
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=500&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1576566588028-43c714de5fa4?w=500&h=600&fit=crop"
+      "/images/cloth1.1.png",
+      "/images/cloth1.2.png",
+      "/images/cloth1.3.png"
     ],
     sizes: ["S", "M", "L", "XL"],
     description: "Premium cotton t-shirt with a comfortable fit and modern design.",

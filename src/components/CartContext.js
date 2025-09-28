@@ -59,9 +59,10 @@ export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, { items: [] });
 
   const addToCart = (product, size, quantity = 1) => {
+    const image = product.image || (product.images && product.images.length > 0 ? product.images[0] : undefined);
     dispatch({
       type: 'ADD_TO_CART',
-      payload: { ...product, size, quantity }
+      payload: { ...product, image, size, quantity }
     });
   };
 

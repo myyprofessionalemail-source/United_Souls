@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import brandIcon from '../images/brand_icon.png';
 import { Link } from 'react-router-dom';
 import { useCart } from './CartContext';
 import './Navbar.css';
@@ -16,7 +15,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={() => setIsMenuOpen(false)}>
-          <img src={brandIcon} alt="Logo" style={{ height: '32px', verticalAlign: 'middle', marginRight: '8px' }} />
+          <img src="images/brand_icon.png" alt="Logo" style={{ height: '32px', verticalAlign: 'middle', marginRight: '8px' }} />
           <span className="logo-text">United Souls</span>
         </Link>
 
