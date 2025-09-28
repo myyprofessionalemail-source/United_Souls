@@ -119,9 +119,9 @@ const HomePage = () => {
                   <path d="M22 6l-10 7L2 6"/>
                 </svg>
               </div>
-              <h3 className="feature-title">Easy Returns</h3>
+              <h3 className="feature-title">No Return/Exchange</h3>
               <p className="feature-description">
-                07-day return policy for your peace of mind
+                No COD applicable
               </p>
             </div>
           </div>

@@ -99,8 +99,8 @@ const Footer = () => {
                   </div>
                 )}
               </li>
-              <li><a href="#returns" className="footer-link">Returns</a></li>
-              <li><a href="#size-guide" className="footer-link">Size Guide</a></li>
+              {/* <li><a href="#returns" className="footer-link">Returns</a></li> */}
+              {/* <li><a href="#size-guide" className="footer-link">Size Guide</a></li> */}
             </ul>
           </div>
 
