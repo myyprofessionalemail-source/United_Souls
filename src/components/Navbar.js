@@ -29,6 +29,9 @@ const Navbar = () => {
           <Link to="/footwear" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
             Footwear
           </Link>
+          <Link to="/watches" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
+            Watches
+          </Link>
           <Link to="/orders" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
             Orders
           </Link>

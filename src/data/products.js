@@ -238,6 +238,44 @@ export const products = [
     sizes: ["7", "8", "9", "10", "11", "12"],
     description: "Anatomically shaped cork-latex footbed.",
     features: ["Leather", "Textile", "Synthetic", "Flip flops"]
+  },
+
+  // Watches Products
+  {
+    id: 100,
+    name: "Casio Vintage Gold",
+    category: "watches",
+    mrp: 2999,
+    discountPercent: 25,
+    price: 2999 - Math.round(2999 * 25 / 100),
+    images: ["/images/casio_vintage_gold.jpg"],
+    sizes: ["One Size"],
+    description: "Casio classic gold digital watch with retro style and water resistance.",
+    features: ["Water Resistant", "Stainless Steel Band", "Digital Display", "1 Year Warranty"]
+  },
+  {
+    id: 101,
+    name: "G-Shock Mudmaster",
+    category: "watches",
+    mrp: 8999,
+    discountPercent: 30,
+    price: 8999 - Math.round(8999 * 30 / 100),
+    images: ["/images/gshock_mudmaster.jpg"],
+    sizes: ["One Size"],
+    description: "G-Shock Mudmaster rugged watch with shock resistance and advanced features.",
+    features: ["Shock Resistant", "Mud Resistant", "Compass", "Water Resistant"]
+  },
+  {
+    id: 102,
+    name: "Titan Neo Analog",
+    category: "watches",
+    mrp: 4999,
+    discountPercent: 20,
+    price: 4999 - Math.round(4999 * 20 / 100),
+    images: ["/images/titan_neo_analog.jpg"],
+    sizes: ["One Size"],
+    description: "Titan Neo elegant analog watch with leather strap and date display.",
+    features: ["Leather Strap", "Date Display", "Quartz Movement", "Water Resistant"]
   }
 ];
 

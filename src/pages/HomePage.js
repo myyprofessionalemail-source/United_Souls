@@ -18,12 +18,13 @@ const HomePage = () => {
             Curated collection of clothing and footwear designed for the modern lifestyle
           </p>
           <div className="hero-actions">
-            <Link to="/clothing" className="hero-btn primary">
-              Shop Clothing
-            </Link>
-            <Link to="/footwear" className="hero-btn secondary">
-              Shop Footwear
-            </Link>
+            <div className="hero-actions-row">
+              <Link to="/clothing" className="hero-btn primary">Shop Clothing</Link>
+              <Link to="/footwear" className="hero-btn secondary">Shop Footwear</Link>
+            </div>
+            <div className="hero-actions-row center">
+              <Link to="/watches" className="hero-btn secondary">Shop Watches</Link>
+            </div>
           </div>
         </div>
         <div className="hero-image">
@@ -81,6 +82,22 @@ const HomePage = () => {
                 <h3 className="category-name">Footwear</h3>
                 <p className="category-description">
                   Stylish and comfortable footwear for every step
+                </p>
+                <span className="category-link">Shop Now →</span>
+              </div>
+            </Link>
+
+            <Link to="/watches" className="category-card">
+              <div className="category-image">
+                <img 
+                  src="https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2F0Y2hlc3xlbnwwfHwwfHx8MA%3D%3?w=600&h=400&fit=crop" 
+                  alt="Watches"
+                />
+              </div>
+              <div className="category-content">
+                <h3 className="category-name">Watches</h3>
+                <p className="category-description">
+                  Stylish analog, digital, and smart watches for every look
                 </p>
                 <span className="category-link">Shop Now →</span>
               </div>

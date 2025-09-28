@@ -37,8 +37,18 @@
 
 .hero-actions {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-actions-row {
+  display: flex;
+  gap: 16px;
+}
+
+.hero-actions-row.center {
+  justify-content: center;
 }
 
 .hero-btn {
@@ -122,9 +132,10 @@
 }
 
 .categories-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  gap: 20px;
 }
 
 .category-card {
@@ -136,6 +147,7 @@
   text-decoration: none;
   color: inherit;
   display: block;
+  flex: 0 1 500px; /* Makes each card responsive with a max width */
 }
 
 .category-card:hover {
@@ -312,6 +324,32 @@
 
   .feature-item {
     padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-btn {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.2rem;
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+    max-width: 45vw;
+  }
+  .hero-btn.accent {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    max-width: 80vw;
+  }
+  .hero-actions-row {
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }
 
