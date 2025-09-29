@@ -1,4 +1,4 @@
-# StyleHub - Modern E-commerce Store
+# United Souls - Modern E-commerce Store
 
 A modern, minimalist e-commerce website built with React.js. Features a clean interface for selling clothing and footwear with a fully functional cart system.
 
